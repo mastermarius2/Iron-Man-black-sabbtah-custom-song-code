@@ -1,6 +1,7 @@
 #Iron man black sabbath
 use_bpm 127
-iron_man = "C:/Users/mario_restori/Documents/Audacity/i_am_iron_man.wav"
+iron_man = "C:/Users/mario_restori/Documents/Audacity/vocals only.wav"
+
 define :outro_part do
   play :e4
   sleep 0.5
