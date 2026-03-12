@@ -1,6 +1,6 @@
 #Iron man black sabbath
 use_bpm 117
-lyricPlay= ["nobody", "want", "him", "he", "just", "stares", "at", "the", "world"]
+lyricPlay= ["c4", "d4", "e4", "f4", "g4", "e4", "b5", "b5", "b5", "a5", "f4", "d4"]
 l = 0
 iron_man = "C:/Users/mario_restori/Documents/Audacity/i_am_iron_man.wav"
 define :outro_part do
@@ -108,11 +108,6 @@ live_loop :guitar do
   stop
 end
 sleep 54
-9.times do
-  print(lyricPlay[l])
-  sleep 1
-  l = l + 1
-end
 live_loop :melody_2 do
   4.times do
     play :a3
@@ -142,9 +137,15 @@ live_loop :melody_2 do
   end
   stop
 end
-sleep 54
-
+sleep 52
+12.times do
+  play(lyricPlay[l])
+  sleep 0.5
+  l = l + 1
+end
+sleep 4
 outro_part
+sleep 4
 play :e4
 sleep 0.5
 play :d4
@@ -175,10 +176,16 @@ play :a4
 sleep 0.45
 play :c4, sustain: 1
 sleep 1
-play :a4, amp: 0.8
+play :a4
 sleep 0.5
-play :e4, amp: 0.7
+play :e4
 sleep 0.5
-play :d4, amp: 0.6
+play :d4
 sleep 0.5
+play :e4, amp: 2
+sleep 0.75
+play :e4, amp: 1
+sleep 0.75
 play :e4, amp: 0.5
+sleep 0.75
+play :e4, amp: 0.25
